@@ -1,0 +1,594 @@
+<html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>CBSE Exam Preparation</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#f4f7fc;color:#182033}
+button,select{font:inherit}
+header{position:sticky;top:0;z-index:10;background:linear-gradient(135deg,#1729a6,#681bd1);color:white;padding:15px 5%;display:flex;align-items:center;justify-content:space-between;box-shadow:0 4px 15px #0002}
+.logo{font-size:21px;font-weight:bold}.logo span{color:#ffd43b}
+nav{display:flex;gap:20px}nav a{color:white;text-decoration:none;font-weight:bold}
+.hero{padding:65px 7%;color:white;background:radial-gradient(circle at 80% 20%,#8f6cff55,transparent 30%),linear-gradient(135deg,#101d5e,#3046cf)}
+.hero-content{max-width:700px}.hero h1{font-size:48px;line-height:1.1;margin-bottom:18px}.hero h1 span{color:#ffd43b}.hero p{font-size:18px;line-height:1.6;color:#e9ebff}
+.btn{border:0;padding:13px 20px;border-radius:10px;cursor:pointer;font-weight:bold}.primary{background:#ffd43b;color:#111}.dark{background:#273bd0;color:white}.gray{background:#eef1f7;color:#333}
+.hero-buttons{margin-top:25px;display:flex;gap:10px;flex-wrap:wrap}
+section{padding:45px 6%}.title{text-align:center;margin-bottom:28px}.title h2{font-size:30px}.title p{color:#687287;margin-top:7px}
+.stats,.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.stat{background:white;padding:22px;border-radius:15px;text-align:center;box-shadow:0 7px 20px #0001}.stat h2{color:#3044d3;font-size:30px}
+.card{background:white;padding:24px;border-radius:16px;border:1px solid #e8ebf2;box-shadow:0 7px 20px #0000000c;cursor:pointer;transition:.2s}.card:hover{transform:translateY(-5px);box-shadow:0 14px 28px #0002}.icon{font-size:38px;margin-bottom:12px}.card p{color:#70798b;margin-top:7px}
+.selector{background:white;max-width:1000px;margin:auto;padding:25px;border-radius:18px;box-shadow:0 8px 25px #0001}.select-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}label{font-weight:bold;display:block;margin-bottom:7px}select{width:100%;padding:13px;border:1px solid #d9deea;border-radius:9px;background:white}
+.practice{display:none;background:#eef1ff}.practice-box{max-width:850px;margin:auto;background:white;padding:28px;border-radius:20px;box-shadow:0 10px 30px #0001}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}.timer{background:#fff0f0;color:#d52222;padding:9px 13px;border-radius:8px;font-weight:bold}
+.progress{height:8px;background:#e4e7ee;border-radius:20px;overflow:hidden;margin-bottom:25px}.progress-bar{height:100%;width:0;background:#3f50d7}.question{font-size:21px;font-weight:bold;line-height:1.5;margin-bottom:20px}.options{display:grid;gap:12px}.option{padding:15px;border:2px solid #e0e4ed;border-radius:10px;cursor:pointer}.option:hover{border-color:#4657db;background:#f4f6ff}.option.correct{background:#ddf8e7;border-color:#1b9e4b}.option.wrong{background:#ffe1e1;border-color:#df3232}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}.hint{display:none;background:#fff8dd;padding:13px;border-radius:9px;margin-top:15px}.explanation{display:none;margin-top:15px;padding:15px;background:#f1f4ff;border-radius:10px}
+.result{display:none;max-width:700px;margin:auto;background:white;padding:35px;text-align:center;border-radius:20px;box-shadow:0 10px 30px #0001}.result-score{font-size:55px;font-weight:bold;color:#3448d3;margin:15px}.review{text-align:left;margin-top:25px}.review-item{padding:13px;margin-top:10px;border-radius:9px;background:#f4f6fa}
+.features{grid-template-columns:repeat(3,1fr)}footer{background:#101735;color:white;text-align:center;padding:35px}footer span{color:#ffd43b}
+@media(max-width:800px){nav{display:none}.hero h1{font-size:38px}.stats,.grid{grid-template-columns:repeat(2,1fr)}.select-grid{grid-template-columns:1fr}.features{grid-template-columns:1fr}}
+@media(max-width:500px){section{padding:35px 5%}.hero{padding:50px 6%}.hero h1{font-size:32px}.stats,.grid{grid-template-columns:1fr}.practice-box{padding:20px}}
+
+.test-info{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.test-info span{background:#f1f4ff;color:#3448d3;padding:8px 11px;border-radius:999px;font-size:13px;font-weight:bold}.selector .select-grid{grid-template-columns:repeat(4,1fr)}@media(max-width:1000px){.selector .select-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.selector .select-grid{grid-template-columns:1fr}}
+.pool-badge{display:inline-block;margin-top:10px;padding:7px 12px;border-radius:999px;background:#e8ecff;color:#3448d3;font-weight:800;font-size:13px}.advanced-note{margin-top:10px;color:#5d6780;font-size:13px;line-height:1.5}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">📚 CBSE <span>Exam Preparation</span></div>
+<nav><a href="#home">Home</a><a href="#classes">Classes</a><a href="#subjects">Subjects</a><a href="#practice">Practice</a></nav>
+</header>
+
+<div class="hero" id="home">
+<div class="hero-content">
+<h1>Prepare Smart.<br>Score <span>Better.</span></h1>
+<p>CBSE exam preparation for Class 7–12 with chapter-wise practice, advanced MCQs, mock tests and progressive difficulty.</p><p style="margin-top:14px;font-weight:800;color:#ffd43b">Made with Ansh Shukla</p>
+<div class="hero-buttons">
+<button class="btn primary" onclick="openPractice()">🚀 Start Practice</button>
+<button class="btn gray" onclick="location.href='#classes'">📚 Explore Classes</button>
+</div>
+</div>
+</div>
+
+<section>
+<div class="stats">
+<div class="stat"><h2>6</h2><p>Classes</p></div>
+<div class="stat"><h2>7+</h2><p>Subjects</p></div>
+<div class="stat"><h2>2.5M+</h2><p>Dynamic Questions</p></div>
+<div class="stat"><h2>24/7</h2><p>Practice</p></div>
+</div>
+</section>
+
+<section id="classes">
+<div class="title"><h2>Choose Your Class</h2><p>Select your class to start preparation</p></div>
+<div class="grid">
+<div class="card" onclick="chooseClass('7')"><div class="icon">📗</div><h3>Class 7</h3><p>Middle school preparation</p></div>
+<div class="card" onclick="chooseClass('8')"><div class="icon">📘</div><h3>Class 8</h3><p>Foundation preparation</p></div>
+<div class="card" onclick="chooseClass('9')"><div class="icon">📘</div><h3>Class 9</h3><p>Secondary preparation</p></div>
+<div class="card" onclick="chooseClass('10')"><div class="icon">🎯</div><h3>Class 10</h3><p>Board exam preparation</p></div>
+<div class="card" onclick="chooseClass('11')"><div class="icon">📕</div><h3>Class 11</h3><p>Senior secondary preparation</p></div>
+<div class="card" onclick="chooseClass('12')"><div class="icon">🏆</div><h3>Class 12</h3><p>Final board preparation</p></div>
+</div>
+</section>
+
+<section id="subjects">
+<div class="title"><h2>Subjects</h2><p>Select a subject for practice</p></div>
+<div class="grid">
+<div class="card" onclick="chooseSubject('Mathematics')"><div class="icon">📐</div><h3>Mathematics</h3><p>Numbers, Algebra, Geometry</p></div>
+<div class="card" onclick="chooseSubject('Science')"><div class="icon">🔬</div><h3>Science</h3><p>Physics, Chemistry, Biology</p></div>
+<div class="card" onclick="chooseSubject('English')"><div class="icon">📖</div><h3>English</h3><p>Grammar &amp; Literature</p></div>
+<div class="card" onclick="chooseSubject('Hindi')"><div class="icon">🪔</div><h3>Hindi</h3><p>भाषा, व्याकरण &amp; साहित्य</p></div>
+<div class="card" onclick="chooseSubject('Social Science')"><div class="icon">🌍</div><h3>Social Science</h3><p>History, Geography, Civics &amp; Economics</p></div>
+<div class="card" onclick="chooseSubject('Computer')"><div class="icon">💻</div><h3>Computer</h3><p>Programming, Networks &amp; Digital Skills</p></div>
+<div class="card" onclick="chooseSubject('Information Technology')"><div class="icon">🖥️</div><h3>Information Technology</h3><p>Digital documentation, data &amp; cyber safety</p></div>
+</div>
+</section>
+
+<section>
+<div class="title"><h2>Build Your Practice Test</h2><p>Select board, class, subject and chapter — literature chapters are listed separately for focused practice.</p></div>
+<div class="selector">
+<div class="select-grid">
+<div><label>Board</label><select id="boardSelect">
+<option>CBSE</option><option>ICSE</option><option>ISC</option><option>NIOS</option>
+<option>Andhra Pradesh Board</option><option>Assam Board</option><option>Bihar Board</option>
+<option>Chhattisgarh Board</option><option>Goa Board</option><option>Gujarat Board</option>
+<option>Haryana Board</option><option>Himachal Pradesh Board</option><option>Jharkhand Board</option>
+<option>Karnataka Board</option><option>Kerala Board</option><option>Madhya Pradesh Board</option>
+<option>Maharashtra Board</option><option>Manipur Board</option><option>Meghalaya Board</option>
+<option>Mizoram Board</option><option>Nagaland Board</option><option>Odisha Board</option>
+<option>Punjab Board</option><option>Rajasthan Board</option><option>Tamil Nadu Board</option>
+<option>Telangana Board</option><option>Tripura Board</option><option>Uttar Pradesh Board</option>
+<option>Uttarakhand Board</option><option>West Bengal Board</option>
+</select></div>
+<div><label>Class</label><select id="classSelect">
+<option value="7">Class 7</option><option value="8">Class 8</option><option value="9">Class 9</option>
+<option value="10">Class 10</option><option value="11">Class 11</option><option value="12">Class 12</option>
+</select></div>
+<div><label>Subject</label><select id="subjectSelect"></select></div>
+<div><label>Chapter</label><select id="chapterSelect"></select></div>
+</div>
+<div class="test-info">
+<span>📝 25 MCQs/Test</span><span>🎯 Chapter-wise</span><span>🧠 Advanced CBSE-style</span><span>⚡ 2.5M+ Dynamic Questions</span><span>🔀 Random order</span>
+</div>
+<br><button class="btn dark" onclick="openPractice()">Start Custom Test →</button>
+</div>
+</section>
+
+<section class="practice" id="practice">
+<div class="title"><h2>MCQ Practice</h2><p>25 questions • Advanced CBSE-style • Random order • Dynamic question pool</p></div>
+<div class="practice-box">
+<div class="top"><strong id="qNumber">Question 1</strong><div class="timer">⏱ <span id="time">15:00</span></div></div>
+<div class="progress"><div class="progress-bar" id="progress"></div></div>
+<div class="question" id="question"></div>
+<div class="options" id="options"></div>
+<div class="hint" id="hint"></div>
+<div class="explanation" id="explanation"></div>
+<div class="actions"><button class="btn gray" onclick="showHint()">💡 Hint</button><button class="btn dark" onclick="nextQuestion()">Next →</button></div>
+</div>
+</section>
+
+<section>
+<div class="result" id="result">
+<h2>🎉 Test Completed!</h2><div class="result-score" id="resultScore">0%</div><p id="resultText"></p>
+<div class="review" id="review"></div><br>
+<button class="btn dark" onclick="restartTest()">🔄 Practice Again</button>
+</div>
+</section>
+
+<section>
+<div class="title"><h2>Everything You Need</h2><p>Smart preparation tools for CBSE students</p></div>
+<div class="grid features">
+<div class="card"><div class="icon">📝</div><h3>Advanced MCQ Practice</h3><p>Higher-order, inference and application-based CBSE-style questions.</p><span class="pool-badge">2.5M+ virtual question pool</span></div>
+<div class="card"><div class="icon">⏱️</div><h3>Timed Tests</h3><p>Improve exam speed.</p></div>
+<div class="card"><div class="icon">📊</div><h3>Result Analysis</h3><p>See your score and percentage.</p></div>
+<div class="card"><div class="icon">💡</div><h3>Hints</h3><p>Get help when needed.</p></div>
+<div class="card"><div class="icon">📚</div><h3>Chapter Wise</h3><p>Practice specific topics.</p></div>
+<div class="card"><div class="icon">📱</div><h3>Mobile Friendly</h3><p>Study on any device.</p></div>
+</div>
+</section>
+
+<footer><h2>📚 CBSE <span>Exam Preparation</span></h2><p style="margin-top:10px">Learn • Practice • Improve • Achieve</p><p style="margin-top:10px;opacity:.7">CBSE chapter-wise practice for Classes 7–12. Advanced questions are dynamically generated at runtime; the 2.5M+ pool is virtual, so the HTML stays lightweight.</p><p style="margin-top:18px;opacity:.85">Made with Ansh Shukla</p><p style="margin-top:8px;opacity:.6">© 2026 CBSE Exam Preparation</p></footer>
+
+<script>
+const questionBank={"Mathematics":[{"q":"What is the value of 2 + 2?","o":["3","4","5","6"],"a":1,"h":"Add the two numbers.","e":"2 + 2 = 4."},{"q":"Which of the following is a prime number?","o":["4","6","7","9"],"a":2,"h":"A prime number has exactly two factors.","e":"7 is divisible only by 1 and 7."},{"q":"What is 5²?","o":["10","15","20","25"],"a":3,"h":"Multiply 5 by itself.","e":"5 × 5 = 25."},{"q":"What is 10 × 10?","o":["10","50","100","1000"],"a":2,"h":"Multiply the two factors.","e":"10 × 10 = 100."},{"q":"Which is the degree of a linear polynomial?","o":["0","1","2","3"],"a":1,"h":"A linear polynomial has highest power 1.","e":"The degree is 1."},{"q":"The zero of p(x)=x−5 is:","o":["−5","0","5","10"],"a":2,"h":"Put p(x)=0.","e":"x−5=0 gives x=5."},{"q":"Which is an irrational number?","o":["1/2","0.25","√2","3"],"a":2,"h":"It cannot be written as a ratio of integers.","e":"√2 is irrational."},{"q":"If 3x=18, x is:","o":["3","6","9","12"],"a":1,"h":"Divide both sides by 3.","e":"x=6."},{"q":"The coordinates of the origin are:","o":["(1,1)","(0,1)","(1,0)","(0,0)"],"a":3,"h":"The origin is where the axes meet.","e":"The origin is (0,0)."},{"q":"A triangle with sides 3, 4 and 5 is:","o":["Equilateral","Isosceles","Right-angled","Obtuse"],"a":2,"h":"Check the Pythagorean relation.","e":"3²+4²=5², so it is right-angled."},{"q":"The sum of angles of a triangle is:","o":["90°","180°","270°","360°"],"a":1,"h":"Use the angle-sum property.","e":"The sum is 180°."},{"q":"Area of a rectangle of length 8 cm and breadth 5 cm is:","o":["13 cm²","26 cm²","40 cm²","80 cm²"],"a":2,"h":"Area = length × breadth.","e":"8×5=40 cm²."},{"q":"The circumference of a circle is:","o":["πr²","2πr","πd²","r²"],"a":1,"h":"Use the standard circumference formula.","e":"Circumference = 2πr."},{"q":"The mean of 2, 4, 6, 8 is:","o":["4","5","6","20"],"a":1,"h":"Add and divide by the number of values.","e":"(2+4+6+8)/4=5."},{"q":"Probability of a certain event is:","o":["0","1/2","1","2"],"a":2,"h":"A certain event always occurs.","e":"Its probability is 1."},{"q":"Factorisation of x²−9 is:","o":["(x−9)(x+1)","(x−3)(x+3)","(x−1)(x+9)","(x−3)²"],"a":1,"h":"Use difference of squares.","e":"x²−9=(x−3)(x+3)."},{"q":"If a:b=2:3 and a=10, b is:","o":["12","15","18","20"],"a":1,"h":"Multiply the ratio by 5.","e":"b=15."},{"q":"The HCF of 18 and 24 is:","o":["3","6","9","12"],"a":1,"h":"List common factors.","e":"The highest common factor is 6."},{"q":"The LCM of 6 and 8 is:","o":["12","18","24","48"],"a":2,"h":"Find the smallest common multiple.","e":"LCM=24."},{"q":"2³ × 2² equals:","o":["2⁵","2⁶","4⁵","4⁶"],"a":0,"h":"Add exponents for the same base.","e":"2³×2²=2⁵."},{"q":"If x+y=10 and x−y=2, x is:","o":["4","6","8","12"],"a":1,"h":"Add the two equations.","e":"2x=12, so x=6."},{"q":"The slope of y=3x+2 is:","o":["2","3","−3","1/3"],"a":1,"h":"Compare with y=mx+c.","e":"The slope m is 3."},{"q":"A quadrilateral has how many sides?","o":["3","4","5","6"],"a":1,"h":"Count its sides.","e":"A quadrilateral has 4 sides."},{"q":"The median of 3, 7, 9, 10, 12 is:","o":["7","8","9","10"],"a":2,"h":"Choose the middle value.","e":"The middle value is 9."},{"q":"If radius of a circle is doubled, its area becomes:","o":["2 times","3 times","4 times","8 times"],"a":2,"h":"Area is proportional to r².","e":"Doubling r makes area four times."}],"Science":[{"q":"What is the SI unit of force?","o":["Joule","Newton","Watt","Pascal"],"a":1,"h":"It is named after a famous scientist.","e":"The SI unit of force is Newton."},{"q":"Which gas is most abundant in Earth's atmosphere?","o":["Oxygen","Nitrogen","Hydrogen","CO₂"],"a":1,"h":"It makes up about 78% of the atmosphere.","e":"Nitrogen is the most abundant atmospheric gas."},{"q":"Which organ pumps blood in the human body?","o":["Lungs","Brain","Heart","Kidney"],"a":2,"h":"It beats continuously.","e":"The heart pumps blood throughout the body."},{"q":"The basic unit of life is:","o":["Tissue","Cell","Organ","Atom"],"a":1,"h":"All living organisms are made of it.","e":"The cell is the basic unit of life."},{"q":"Photosynthesis mainly occurs in:","o":["Nucleus","Chloroplast","Mitochondria","Ribosome"],"a":1,"h":"It contains chlorophyll.","e":"Photosynthesis occurs in chloroplasts."},{"q":"Which is a chemical change?","o":["Melting ice","Boiling water","Rusting iron","Cutting paper"],"a":2,"h":"A new substance is formed.","e":"Rusting forms iron oxide."},{"q":"The pH of a neutral solution is:","o":["0","5","7","14"],"a":2,"h":"Pure water is neutral at room conditions.","e":"Neutral pH is 7."},{"q":"Which particle has a negative charge?","o":["Proton","Neutron","Electron","Nucleus"],"a":2,"h":"It is found outside the nucleus.","e":"An electron has negative charge."},{"q":"Speed is calculated as:","o":["Distance × time","Distance/time","Time/distance","Mass/time"],"a":1,"h":"Use the basic motion formula.","e":"Speed = distance ÷ time."},{"q":"Which lens is used to correct myopia?","o":["Convex","Concave","Cylindrical only","Plane"],"a":1,"h":"It diverges incoming rays.","e":"Myopia is corrected with a concave lens."},{"q":"The SI unit of electric current is:","o":["Volt","Ohm","Ampere","Watt"],"a":2,"h":"It is named after André-Marie Ampère.","e":"The unit is ampere."},{"q":"Which metal is liquid at room temperature?","o":["Iron","Copper","Mercury","Aluminium"],"a":2,"h":"It is a metallic element that is liquid.","e":"Mercury is liquid at room temperature."},{"q":"Acids turn blue litmus:","o":["Blue","Red","Green","Yellow"],"a":1,"h":"Acids change blue litmus to its acid colour.","e":"Blue litmus turns red."},{"q":"DNA is mainly located in the:","o":["Cell wall","Nucleus","Vacuole","Cytoplasm only"],"a":1,"h":"In eukaryotic cells it is housed here.","e":"Most cellular DNA is in the nucleus."},{"q":"Which vitamin is produced in skin in sunlight?","o":["Vitamin A","Vitamin B12","Vitamin C","Vitamin D"],"a":3,"h":"Sunlight helps the body synthesize it.","e":"Vitamin D is synthesized in the skin."},{"q":"The boiling point of water at standard atmospheric pressure is:","o":["0°C","50°C","100°C","212°C below zero"],"a":2,"h":"It is the familiar boiling point of water.","e":"Water boils at 100°C."},{"q":"Which blood cells help fight infection?","o":["RBCs","WBCs","Platelets","Plasma only"],"a":1,"h":"They are part of the immune system.","e":"White blood cells help fight infections."},{"q":"The process of changing solid directly to gas is:","o":["Condensation","Sublimation","Freezing","Evaporation"],"a":1,"h":"It skips the liquid state.","e":"This process is sublimation."},{"q":"Which gas is released during photosynthesis?","o":["Nitrogen","Oxygen","Hydrogen","Methane"],"a":1,"h":"It is released as a product of photosynthesis.","e":"Oxygen is released."},{"q":"Ohm's law is:","o":["V=IR","P=VI","F=ma","W=mg"],"a":0,"h":"Relate voltage, current and resistance.","e":"Ohm's law is V=IR."},{"q":"The powerhouse of the cell is:","o":["Ribosome","Mitochondrion","Golgi body","Vacuole"],"a":1,"h":"It produces much of the cell's usable energy.","e":"Mitochondria are the powerhouse of the cell."},{"q":"A substance with pH less than 7 is generally:","o":["Basic","Neutral","Acidic","Always salty"],"a":2,"h":"Values below 7 indicate acidity.","e":"It is acidic."},{"q":"Which force pulls objects toward Earth?","o":["Magnetic force","Gravitational force","Friction","Electrostatic force"],"a":1,"h":"It acts between masses.","e":"Gravity attracts objects toward Earth."},{"q":"The image formed by a plane mirror is generally:","o":["Real and inverted","Virtual and erect","Real and enlarged","Virtual and inverted"],"a":1,"h":"A plane mirror produces a non-projectable image.","e":"It is virtual and erect."},{"q":"Which component carries hereditary information?","o":["Gene","Starch","Fat","Water"],"a":0,"h":"It is a unit of heredity.","e":"Genes carry hereditary information."}],"English":[{"q":"Choose the correct plural of 'child'.","o":["Childs","Childes","Children","Childrens"],"a":2,"h":"It is an irregular plural.","e":"The correct plural is children."},{"q":"Which word is a noun?","o":["Beautiful","Run","School","Quickly"],"a":2,"h":"A noun names a person, place, thing or idea.","e":"School is a noun."},{"q":"Choose the correct article: ___ honest person.","o":["A","An","The","No article"],"a":1,"h":"Use an before a vowel sound.","e":"An honest person is correct."},{"q":"Choose the correct tense: She ___ to school every day.","o":["go","goes","went","going"],"a":1,"h":"Use simple present for a routine.","e":"She goes to school every day."},{"q":"Identify the adjective: The tall boy won.","o":["The","tall","boy","won"],"a":1,"h":"An adjective describes a noun.","e":"Tall describes boy."},{"q":"Choose the synonym of 'rapid'.","o":["Slow","Quick","Weak","Late"],"a":1,"h":"Look for a word with a similar meaning.","e":"Rapid means quick."},{"q":"Choose the antonym of 'ancient'.","o":["Old","Modern","Historic","Early"],"a":1,"h":"Look for the opposite meaning.","e":"Modern is the antonym."},{"q":"Choose the correctly punctuated sentence.","o":["What a beautiful day!","What a beautiful day.","What a beautiful day,","What a beautiful day?"],"a":0,"h":"An exclamation expresses strong feeling.","e":"The exclamation mark is appropriate."},{"q":"Fill in: He is good ___ mathematics.","o":["in","at","on","for"],"a":1,"h":"Use the standard preposition with good.","e":"Good at mathematics is correct."},{"q":"Identify the pronoun: Riya said she was ready.","o":["Riya","said","she","ready"],"a":2,"h":"A pronoun replaces a noun.","e":"She is a pronoun."},{"q":"Choose the passive voice: The teacher praised Ravi.","o":["Ravi praised the teacher.","Ravi was praised by the teacher.","The teacher was praised by Ravi.","Ravi is praising the teacher."],"a":1,"h":"Move the object to subject position.","e":"Ravi was praised by the teacher."},{"q":"Choose the correct reported speech: He said, 'I am tired.'","o":["He said that I am tired.","He said that he was tired.","He says that he is tired.","He said he is tiring."],"a":1,"h":"Backshift the pronoun and tense appropriately.","e":"He said that he was tired."},{"q":"Choose the correct modal: You ___ obey traffic rules.","o":["may","should","might","could"],"a":1,"h":"Use a modal expressing advice/duty.","e":"Should is appropriate."},{"q":"Choose the correct conjunction: I stayed home ___ it was raining.","o":["but","because","or","so"],"a":1,"h":"The second clause gives the reason.","e":"Because joins the reason."},{"q":"Identify the adverb: She sang beautifully.","o":["She","sang","beautifully","none"],"a":2,"h":"An adverb can describe how an action is done.","e":"Beautifully modifies sang."},{"q":"Choose the correct form: Neither Rohan nor his friends ___ ready.","o":["is","are","was","has"],"a":1,"h":"With nor and a plural nearer subject, use plural agreement.","e":"Are is correct."},{"q":"Choose the correctly spelt word.","o":["Definately","Definitely","Definitly","Definetely"],"a":1,"h":"Remember the spelling of definite + ly.","e":"Definitely is correct."},{"q":"The main purpose of a notice is to:","o":["Entertain only","Give concise information","Tell a long story","Write a poem"],"a":1,"h":"A notice communicates essential information briefly.","e":"A notice gives concise information."},{"q":"A formal letter should generally use:","o":["Slang","Informal chat language","Polite formal language","Only emojis"],"a":2,"h":"Formal communication needs an appropriate register.","e":"Polite formal language is suitable."},{"q":"A summary should be:","o":["Longer than the original","Brief and focused on main points","Only a list of names","Unrelated to the text"],"a":1,"h":"A summary condenses the main ideas.","e":"It should be brief and focused."},{"q":"Choose the correct question tag: You are coming, ___?","o":["aren't you","are you","isn't it","won't you"],"a":0,"h":"The positive statement takes a negative tag.","e":"Aren't you is correct."},{"q":"Choose the correct spelling:","o":["Accomodation","Accommodation","Acommodation","Accommadation"],"a":1,"h":"The standard spelling has double c and double m.","e":"Accommodation is correct."},{"q":"The word 'although' usually introduces:","o":["A contrast","A name","A question","A command"],"a":0,"h":"It connects contrasting ideas.","e":"Although introduces a contrast."},{"q":"Choose the correct sentence:","o":["He don't like tea.","He doesn't likes tea.","He doesn't like tea.","He not likes tea."],"a":2,"h":"Use does not + base verb.","e":"He doesn't like tea is correct."},{"q":"In a comprehension passage, an inference is:","o":["A direct quotation only","A conclusion drawn from clues","The title only","A spelling error"],"a":1,"h":"It is a reasoned conclusion from the text.","e":"An inference is drawn from textual clues."}],"Social Science":[{"q":"Which is the largest continent?","o":["Africa","Asia","Europe","Australia"],"a":1,"h":"It contains India and China.","e":"Asia is the largest continent."},{"q":"Which line divides Earth into Northern and Southern Hemispheres?","o":["Tropic of Cancer","Equator","Prime Meridian","Tropic of Capricorn"],"a":1,"h":"It is located at 0° latitude.","e":"The Equator divides the hemispheres."},{"q":"The Constitution of India came into effect on:","o":["15 August 1947","26 January 1950","26 November 1949","2 October 1950"],"a":1,"h":"India celebrates this as Republic Day.","e":"It came into effect on 26 January 1950."},{"q":"The Indian Parliament consists of:","o":["Only Lok Sabha","Only Rajya Sabha","President and two Houses","Only the President"],"a":2,"h":"The constitutional Parliament has three components.","e":"It consists of the President, Lok Sabha and Rajya Sabha."},{"q":"Which is a renewable resource?","o":["Coal","Petroleum","Solar energy","Natural gas"],"a":2,"h":"It is naturally replenished.","e":"Solar energy is renewable."},{"q":"The Tropic of Cancer passes through:","o":["India","Australia only","Antarctica","Greenland"],"a":0,"h":"It crosses northern India.","e":"The Tropic of Cancer passes through India."},{"q":"Which soil is widely associated with cotton cultivation?","o":["Black soil","Laterite soil","Alluvial soil only","Mountain soil"],"a":0,"h":"It is also called regur soil.","e":"Black soil is suitable for cotton."},{"q":"The Green Revolution is mainly associated with:","o":["Milk production","Food-grain production","Fishing","Silk production"],"a":1,"h":"It increased agricultural productivity.","e":"It is associated with higher food-grain production."},{"q":"Democracy means government by:","o":["A monarch only","The people","The military only","Judges only"],"a":1,"h":"The word relates to rule by the people.","e":"Democracy is government by the people."},{"q":"The Right to Equality is a:","o":["Fundamental Right","Directive Principle only","Legal notice","Tax rule"],"a":0,"h":"It is included among Fundamental Rights.","e":"It is a Fundamental Right."},{"q":"Which institution conducts elections in India?","o":["Election Commission of India","Reserve Bank of India","Supreme Court only","NITI Aayog"],"a":0,"h":"It is the constitutional election authority.","e":"The Election Commission of India conducts elections."},{"q":"GDP stands for:","o":["Gross Domestic Product","General Development Plan","Global Domestic Price","Gross Development Process"],"a":0,"h":"It measures the value of final goods and services produced.","e":"GDP means Gross Domestic Product."},{"q":"Which sector includes agriculture?","o":["Primary sector","Secondary sector","Tertiary sector","Quaternary only"],"a":0,"h":"It involves extraction or use of natural resources.","e":"Agriculture belongs to the primary sector."},{"q":"The French Revolution began in:","o":["1776","1789","1815","1914"],"a":1,"h":"The Bastille was stormed in this year.","e":"The French Revolution began in 1789."},{"q":"The Industrial Revolution first began in:","o":["Britain","India","Japan","Brazil"],"a":0,"h":"It began in eighteenth-century Britain.","e":"Britain was the first major centre."},{"q":"The Suez Canal connects:","o":["Mediterranean Sea and Red Sea","Atlantic and Pacific","Arabian Sea and Bay of Bengal","Black Sea and Caspian Sea"],"a":0,"h":"It is a major Europe-Asia shipping route.","e":"It connects the Mediterranean and Red seas."},{"q":"Which is a major cause of soil erosion?","o":["Afforestation","Deforestation","Terrace farming","Contour ploughing"],"a":1,"h":"Removal of vegetation exposes soil.","e":"Deforestation can increase soil erosion."},{"q":"Panchayati Raj is associated with:","o":["Local self-government","Central banking","Foreign trade","Railway administration"],"a":0,"h":"It is rural local governance.","e":"Panchayati Raj is local self-government in rural areas."},{"q":"The Reserve Bank of India is the country's:","o":["Central bank","Election body","Highest court","Planning ministry"],"a":0,"h":"It regulates monetary and banking functions.","e":"RBI is India's central bank."},{"q":"Literacy rate refers to the proportion of people who:","o":["Own land","Can read and write with understanding","Work in factories","Live in cities"],"a":1,"h":"It is a measure of basic educational attainment.","e":"It refers to people able to read and write with understanding."},{"q":"Which is a non-renewable resource?","o":["Wind","Solar","Coal","Tidal energy"],"a":2,"h":"It forms over geological time.","e":"Coal is non-renewable."},{"q":"A federal system divides power between:","o":["Different levels of government","Only judges","Only villages","Only the army"],"a":0,"h":"Power is constitutionally shared across levels.","e":"Federalism divides power among levels of government."},{"q":"The monsoon is important for India mainly because it:","o":["Provides much of the annual rainfall","Stops all farming","Eliminates rivers","Creates deserts everywhere"],"a":0,"h":"Indian agriculture depends significantly on seasonal rainfall.","e":"The monsoon provides much of India's rainfall."},{"q":"The tertiary sector mainly provides:","o":["Services","Raw minerals","Crops only","Factory machines only"],"a":0,"h":"Examples include transport, banking and education.","e":"The tertiary sector is the service sector."},{"q":"A map scale shows:","o":["Relationship between map distance and ground distance","Only direction","Only temperature","Only population"],"a":0,"h":"Scale represents distances proportionally.","e":"It relates map distance to actual ground distance."}]};
+
+/* Expanded curriculum + progressive test engine */
+const SUBJECTS=["Mathematics","Science","English","Hindi","Social Science","Computer","Information Technology"];
+
+const chapterMap={
+"7":{
+"Mathematics":["Integers","Fractions and Decimals","Data Handling","Simple Equations","Lines and Angles","The Triangle and Its Properties","Comparing Quantities","Rational Numbers","Perimeter and Area","Algebraic Expressions","Exponents and Powers","Symmetry","Visualising Solid Shapes"],
+"Science":["Nutrition in Plants","Nutrition in Animals","Heat","Acids, Bases and Salts","Physical and Chemical Changes","Respiration in Organisms","Transportation in Animals and Plants","Reproduction in Plants","Motion and Time","Electric Current and Its Effects","Light","Forests: Our Lifeline","Wastewater Story"],
+"English":["Reading Comprehension","Grammar","Writing","The Tiny Teacher","Bringing Up Kari","Gopal and the Hilsa Fish","The Ashes That Made Trees Bloom","Quality","Expert Detectives","The Invention of Vita-Wonk","Fire: Friend and Foe","A Bicycle in Good Repair","The Story of Cricket"],
+"Hindi":["वर्ण-विचार","शब्द-विचार","संज्ञा","सर्वनाम","विशेषण","क्रिया","काल","वाक्य-विचार","अपठित गद्यांश","लेखन","कविता","गद्य"],
+"Social Science":["Tracing Changes Through a Thousand Years","New Kings and Kingdoms","The Delhi Sultans","The Mughal Empire","Rulers and Buildings","Towns, Traders and Craftspersons","Tribes, Nomads and Settled Communities","Devotional Paths to the Divine","The Making of Regional Cultures","Environment","Inside Our Earth","Air","Water","Human Environment","Markets Around Us","Understanding Media","How the State Government Works"],
+"Computer":["Computer Fundamentals","Operating Systems","Files and Folders","Word Processing","Spreadsheets","Presentations","Internet Basics","Email","Cyber Safety","Algorithms and Flowcharts"],
+"Information Technology":["Digital Documentation","Electronic Spreadsheet","Digital Presentation","Internet and Web Applications","Communication Skills","Cyber Safety","Data Handling","Digital Citizenship"]
+},
+"8":{
+"Mathematics":["Rational Numbers","Linear Equations in One Variable","Understanding Quadrilaterals","Practical Geometry","Data Handling","Squares and Square Roots","Cubes and Cube Roots","Comparing Quantities","Algebraic Expressions and Identities","Visualising Solid Shapes","Mensuration","Exponents and Powers","Direct and Inverse Proportions","Factorisation","Introduction to Graphs"],
+"Science":["Crop Production and Management","Microorganisms: Friend and Foe","Coal and Petroleum","Combustion and Flame","Conservation of Plants and Animals","Reproduction in Animals","Reaching the Age of Adolescence","Force and Pressure","Friction","Sound","Chemical Effects of Electric Current","Some Natural Phenomena","Light","Stars and the Solar System","Pollution of Air and Water"],
+"English":["Reading Comprehension","Grammar","Writing","The Best Christmas Present in the World","The Tsunami","Glimpses of the Past","Bepin Choudhury's Lapse of Memory","The Summit Within","This is Jody's Fawn","A Visit to Cambridge","A Short Monsoon Diary","The Great Stone Face"],
+"Hindi":["संधि","समास","उपसर्ग-प्रत्यय","वाक्य-भेद","काल","वाच्य","मुहावरे और लोकोक्तियाँ","अपठित बोध","अनुच्छेद लेखन","पत्र लेखन","गद्य","पद्य"],
+"Social Science":["How, When and Where","From Trade to Territory","Ruling the Countryside","Tribals, Dikus and the Vision of a Golden Age","When People Rebel","Weavers, Iron Smelters and Factory Owners","Civilising the Native, Educating the Nation","Women, Caste and Reform","The Making of the National Movement","Resources","Land, Soil, Water, Natural Vegetation and Wildlife","Mineral and Power Resources","Manufacturing Industries","Agriculture","The Indian Constitution","Understanding Secularism","Why Do We Need a Parliament?","Judiciary","Understanding Marginalisation","Public Facilities","Law and Social Justice"],
+"Computer":["Computer Networks","HTML Basics","Python Basics","Algorithms","Data Representation","Database Basics","Word Processing","Spreadsheets","Presentations","Internet and Cyber Safety"],
+"Information Technology":["Digital Documentation","Electronic Spreadsheet","Database Concepts","Web Applications","Communication Skills","Self-Management Skills","Cyber Safety","Data Security","Digital Presentation"]
+},
+"9":{
+"Mathematics":["Number Systems","Polynomials","Coordinate Geometry","Linear Equations in Two Variables","Introduction to Euclid's Geometry","Lines and Angles","Triangles","Quadrilaterals","Circles","Heron's Formula","Surface Areas and Volumes","Statistics","Probability"],
+"Science":["Matter in Our Surroundings","Is Matter Around Us Pure","Atoms and Molecules","Structure of the Atom","The Fundamental Unit of Life","Tissues","Motion","Force and Laws of Motion","Gravitation","Work and Energy","Sound","Why Do We Fall Ill","Natural Resources","Improvement in Food Resources"],
+"English":["Reading Skills","Grammar","Writing Skills","Comprehension","The Fun They Had","The Sound of Music","The Little Girl","A Truly Beautiful Mind","The Snake and the Mirror","My Childhood","Reach for the Top","Kathmandu","If I Were You","Moments: The Lost Child","Moments: The Adventures of Toto","Moments: Iswaran the Storyteller","Moments: In the Kingdom of Fools","Moments: The Happy Prince","Moments: Weathering the Storm in Ersama","Moments: The Last Leaf","Moments: A House Is Not a Home","Moments: Beggar"],
+"Hindi":["अपठित बोध","व्याकरण","लेखन","स्पर्श-1: दुःख का अधिकार","स्पर्श-1: एवरेस्ट: मेरी शिखर यात्रा","स्पर्श-1: तुम कब जाओगे, अतिथि","स्पर्श-1: वैज्ञानिक चेतना के वाहक चंद्रशेखर वेंकट रमन","स्पर्श-1: शुक्रतारे के समान","स्पर्श-1: रैदास के पद","स्पर्श-1: रहीम के दोहे","स्पर्श-1: गीत-अगीत","स्पर्श-1: अग्निपथ","स्पर्श-1: नए इलाके में","स्पर्श-1: खुशबू रचते हैं हाथ","संचयन-1: गिल्लू","संचयन-1: स्मृति","संचयन-1: कल्लू कुम्हार की उनाकोटी","संचयन-1: मेरा छोटा सा निजी पुस्तकालय"],
+"Social Science":["The French Revolution","Socialism in Europe and the Russian Revolution","Nazism and the Rise of Hitler","Forest Society and Colonialism","Pastoralists in the Modern World","India: Size and Location","Physical Features of India","Drainage","Climate","Natural Vegetation and Wildlife","Population","What is Democracy? Why Democracy?","Constitutional Design","Electoral Politics","Working of Institutions","Democratic Rights","The Story of Village Palampur","People as Resource","Poverty as a Challenge","Food Security in India"],
+"Computer":["Computer Systems","Operating System","Number System","Boolean Logic","Python Programming","HTML and Web","Data Handling","Cyber Ethics","Networking","Database"],
+"Information Technology":["Communication Skills","Self-Management Skills","ICT Skills","Entrepreneurial Skills","Digital Documentation","Electronic Spreadsheet","Digital Presentation","Green Skills","Cyber Safety"]
+},
+"10":{
+"Mathematics":["Real Numbers","Polynomials","Pair of Linear Equations in Two Variables","Quadratic Equations","Arithmetic Progressions","Triangles","Coordinate Geometry","Introduction to Trigonometry","Some Applications of Trigonometry","Circles","Areas Related to Circles","Surface Areas and Volumes","Statistics","Probability"],
+"Science":["Chemical Reactions and Equations","Acids, Bases and Salts","Metals and Non-metals","Carbon and Its Compounds","Life Processes","Control and Coordination","How Do Organisms Reproduce?","Heredity","Light – Reflection and Refraction","The Human Eye and the Colourful World","Electricity","Magnetic Effects of Electric Current","Our Environment"],
+"English":["Reading Comprehension","Grammar","Writing Skills","A Letter to God","Nelson Mandela","Two Stories About Flying","From the Diary of Anne Frank","Glimpses of India","Mijbil the Otter","Madam Rides the Bus","The Sermon at Benares","The Proposal","Dust of Snow","Fire and Ice","A Tiger in the Zoo","How to Tell Wild Animals","The Ball Poem","Amanda!","The Trees","Fog","The Tale of Custard the Dragon","For Anne Gregory","Footprints: A Triumph of Surgery","Footprints: The Thief's Story","Footprints: The Midnight Visitor","Footprints: A Question of Trust","Footprints: Footprints without Feet","Footprints: The Making of a Scientist","Footprints: The Necklace","Footprints: The Hack Driver","Footprints: Bholi","Footprints: The Book That Saved the Earth"],
+"Hindi":["अपठित बोध","व्याकरण","रचनात्मक लेखन","स्पर्श-2: कबीर-साखी","स्पर्श-2: मीरा-पद","स्पर्श-2: बिहारी-दोहे","स्पर्श-2: मनुष्यता","स्पर्श-2: पर्वत प्रदेश में पावस","स्पर्श-2: मधुर-मधुर मेरे दीपक जल","स्पर्श-2: तोप","स्पर्श-2: कर चले हम फ़िदा","स्पर्श-2: आत्मत्राण","स्पर्श-2: बड़े भाई साहब","स्पर्श-2: डायरी का एक पन्ना","स्पर्श-2: तताँरा-वामीरो कथा","स्पर्श-2: तीसरी कसम के शिल्पकार शैलेंद्र","स्पर्श-2: अब कहाँ दूसरों के दुख से दुखी होने वाले","स्पर्श-2: पतझर में टूटी पत्तियाँ","स्पर्श-2: कारतूस","संचयन-2: हरिहर काका","संचयन-2: सपनों के-से दिन","संचयन-2: टोपी शुक्ला","मुहावरे","वाक्य-विचार"],
+"Social Science":["The Rise of Nationalism in Europe","Nationalism in India","The Making of a Global World","The Age of Industrialisation","Print Culture and the Modern World","Resources and Development","Forest and Wildlife Resources","Water Resources","Agriculture","Minerals and Energy Resources","Manufacturing Industries","Lifelines of National Economy","Power Sharing","Federalism","Gender, Religion and Caste","Political Parties","Outcomes of Democracy","Development","Sectors of the Indian Economy","Money and Credit","Globalisation and the Indian Economy","Consumer Rights"],
+"Computer":["Computer Networks","Internet Services","HTML and CSS","Python Programming","Data Structures","Database Management","Cyber Security","Digital Ethics","Artificial Intelligence Basics","Project Work"],
+"Information Technology":["Digital Documentation","Electronic Spreadsheet","Database Management","Web Applications and Security","Communication Skills","Self-Management Skills","Green Skills","Entrepreneurial Skills","Cyber Safety"]
+},
+"11":{
+"Mathematics":["Sets","Relations and Functions","Trigonometric Functions","Complex Numbers and Quadratic Equations","Linear Inequalities","Permutations and Combinations","Binomial Theorem","Sequences and Series","Straight Lines","Conic Sections","Introduction to Three-Dimensional Geometry","Limits and Derivatives","Statistics","Probability"],
+"Science":["Physics: Units and Measurements","Physics: Motion in a Straight Line","Physics: Laws of Motion","Physics: Work, Energy and Power","Physics: Gravitation","Physics: Thermodynamics","Physics: Oscillations and Waves","Chemistry: Basic Concepts","Chemistry: Structure of Atom","Chemistry: Chemical Bonding","Chemistry: Thermodynamics","Chemistry: Equilibrium","Biology: The Living World","Biology: Cell Structure and Function","Biology: Plant Physiology","Biology: Human Physiology"],
+"English":["Reading Comprehension","Grammar and Editing","Writing","The Portrait of a Lady","We're Not Afraid to Die","Discovering Tut","The Adventure","Silk Road","A Photograph","The Laburnum Top","The Voice of the Rain","Childhood","Father to Son"],
+"Hindi":["अपठित बोध","व्यावहारिक व्याकरण","रचनात्मक लेखन","आरोह गद्य","आरोह पद्य","वितान","अभिव्यक्ति और माध्यम"],
+"Social Science":["Political Theory","Indian Constitution at Work","The Story of Village Palampur","Indian Economy on the Eve of Independence","Indian Economy 1950–1990","Liberalisation, Privatisation and Globalisation","India: Physical Environment","Fundamentals of Physical Geography","Fundamentals of Human Geography","Writing and City Life","An Empire Across Three Continents","Nomadic Empires","The Three Orders","Changing Cultural Traditions"],
+"Computer":["Computer Systems and Organisation","Computational Thinking","Python Programming","Data Representation","Boolean Logic","Computer Networks","Database Concepts","Society, Law and Ethics","Cyber Security","Emerging Technologies"],
+"Information Technology":["Communication Skills","Self-Management Skills","ICT Skills","Entrepreneurial Skills","Green Skills","Data Management","Web Technologies","Cyber Security","Digital Presentation","Project Work"]
+},
+"12":{
+"Mathematics":["Relations and Functions","Inverse Trigonometric Functions","Matrices","Determinants","Continuity and Differentiability","Application of Derivatives","Integrals","Application of Integrals","Differential Equations","Vector Algebra","Three Dimensional Geometry","Linear Programming","Probability"],
+"Science":["Physics: Electric Charges and Fields","Physics: Electrostatic Potential and Capacitance","Physics: Current Electricity","Physics: Moving Charges and Magnetism","Physics: Electromagnetic Induction","Physics: Alternating Current","Physics: Ray Optics","Physics: Wave Optics","Physics: Dual Nature of Radiation","Physics: Atoms","Physics: Nuclei","Physics: Semiconductor Electronics","Chemistry: Solutions","Chemistry: Electrochemistry","Chemistry: Chemical Kinetics","Chemistry: Coordination Compounds","Biology: Reproduction","Biology: Genetics and Evolution","Biology: Human Health and Disease","Biology: Biotechnology","Biology: Ecology"],
+"English":["Reading Comprehension","Writing Skills","Notice and Invitations","Letters and Reports","The Last Lesson","Lost Spring","Deep Water","The Rattrap","Indigo","Poets and Pancakes","The Interview","Going Places","My Mother at Sixty-Six","An Elementary School Classroom in a Slum","Keeping Quiet","A Thing of Beauty"],
+"Hindi":["अपठित बोध","व्यावहारिक लेखन","रचनात्मक लेखन","आरोह गद्य","आरोह पद्य","वितान","अभिव्यक्ति और माध्यम","जनसंचार","फीचर लेखन","रिपोर्ट लेखन"],
+"Social Science":["Contemporary World Politics","Politics in India Since Independence","The Cold War Era","Contemporary Centres of Power","Challenges of Nation-Building","Era of One-Party Dominance","Politics of Planned Development","India's Foreign Policy","Globalisation","Human Geography","Population","Human Settlements","Resources and Development","Transport and Communication","International Trade"],
+"Computer":["Data Structures","Python Programming","Functions","File Handling","Data Handling with Pandas","Database Query using SQL","Computer Networks","Society, Law and Ethics","Cyber Security","Project Work"],
+"Information Technology":["Communication Skills","Self-Management Skills","ICT Skills","Entrepreneurial Skills","Green Skills","Database Management","Web Applications","Cyber Security","Data Analysis","Project Work"]
+}};
+
+const baseQuestionBank = questionBank;
+const addedQuestionBank={
+"Hindi":[
+{q:"‘सूर्य’ का पर्यायवाची कौन-सा है?",o:["रवि","रात्रि","पवन","जल"],a:0,h:"सूर्य के प्रचलित समानार्थी शब्द को याद करें।",e:"‘रवि’ सूर्य का पर्यायवाची है।"},
+{q:"‘लाभ’ का विलोम शब्द है:",o:["हानि","धन","यश","विजय"],a:0,h:"लाभ के विपरीत अर्थ वाला शब्द चुनें।",e:"‘हानि’ लाभ का विलोम है।"},
+{q:"‘राम ने पत्र लिखा।’ वाक्य में कर्ता कौन है?",o:["पत्र","लिखा","राम","ने"],a:2,h:"काम करने वाले को कर्ता कहते हैं।",e:"पत्र लिखने वाला ‘राम’ कर्ता है।"},
+{q:"‘बहुत’ किस प्रकार का शब्द है?",o:["संज्ञा","क्रिया-विशेषण","सर्वनाम","समुच्चयबोधक"],a:1,h:"यह क्रिया की मात्रा/रीति को प्रभावित कर सकता है।",e:"‘बहुत’ यहाँ क्रिया-विशेषण है।"},
+{q:"‘नीलकमल’ में कौन-सा समास है?",o:["द्वंद्व","बहुव्रीहि","कर्मधारय","अव्ययीभाव"],a:2,h:"पहला पद दूसरे की विशेषता बताता है।",e:"‘नीलकमल’ कर्मधारय समास का उदाहरण है।"},
+{q:"‘जो मेहनत करता है, वही सफल होता है।’ में ‘जो’ है:",o:["निजवाचक सर्वनाम","सम्बन्धवाचक सर्वनाम","प्रश्नवाचक सर्वनाम","पुरुषवाचक सर्वनाम"],a:1,h:"यह दो खंडों के बीच संबंध स्थापित करता है।",e:"‘जो’ सम्बन्धवाचक सर्वनाम है।"},
+{q:"‘आँखों का तारा’ मुहावरे का अर्थ है:",o:["बहुत प्रिय","बहुत दूर","बहुत क्रोधित","बहुत तेज"],a:0,h:"यह स्नेह और प्रियता का भाव बताता है।",e:"‘आँखों का तारा’ का अर्थ बहुत प्रिय व्यक्ति है।"},
+{q:"‘वह कल दिल्ली जाएगा।’ कौन-सा काल है?",o:["वर्तमान","भूत","भविष्यत्","अपूर्ण भूत"],a:2,h:"क्रिया आगे होने वाली है।",e:"‘जाएगा’ भविष्यत् काल को दर्शाता है।"},
+{q:"‘सुंदर फूल’ में ‘सुंदर’ है:",o:["संज्ञा","विशेषण","सर्वनाम","क्रिया"],a:1,h:"यह फूल की विशेषता बताता है।",e:"‘सुंदर’ विशेषण है।"},
+{q:"‘राम और श्याम आए।’ में ‘और’ है:",o:["समुच्चयबोधक","संबंधबोधक","विस्मयादिबोधक","क्रिया"],a:0,h:"यह दो पदों को जोड़ता है।",e:"‘और’ समुच्चयबोधक अव्यय है।"},
+{q:"‘जल्दी करो।’ वाक्य का प्रकार है:",o:["प्रश्नवाचक","आज्ञावाचक","विस्मयादिबोधक","निषेधवाचक"],a:1,h:"यह निर्देश देता है।",e:"यह आज्ञावाचक वाक्य है।"},
+{q:"‘कमल-सा मुख’ में कौन-सा अलंकार है?",o:["उपमा","रूपक","अनुप्रास","यमक"],a:0,h:"‘सा’ तुलना का संकेत देता है।",e:"तुलना होने के कारण उपमा अलंकार है।"},
+{q:"‘घर’ का तत्सम शब्द है:",o:["गृह","घरा","गेहूँ","ग्राम"],a:0,h:"संस्कृत मूल रूप पहचानें।",e:"‘गृह’ ‘घर’ का तत्सम रूप है।"},
+{q:"‘असफल’ में उपसर्ग है:",o:["अ","स","फल","असफ"],a:0,h:"यह मूल शब्द के पहले लगा है।",e:"‘अ’ उपसर्ग है।"},
+{q:"एक अच्छे अनुच्छेद की प्रमुख विशेषता है:",o:["विषय से भटकना","विचारों की क्रमबद्धता","केवल कठिन शब्द","बहुत अधिक पुनरावृत्ति"],a:1,h:"लेखन में विचारों का क्रम महत्वपूर्ण है।",e:"क्रमबद्ध और विषय-केंद्रित विचार अच्छे अनुच्छेद की विशेषता हैं।"},
+{q:"औपचारिक पत्र में भाषा कैसी होनी चाहिए?",o:["अत्यधिक बोलचाल की","शिष्ट और औपचारिक","केवल संक्षिप्त शब्दों वाली","काव्यात्मक ही"],a:1,h:"औपचारिक संचार में उचित रजिस्टर रखें।",e:"औपचारिक पत्र में शिष्ट और औपचारिक भाषा उचित है।"},
+{q:"‘पानी’ का एक पर्यायवाची है:",o:["नीर","अनल","पवन","धरती"],a:0,h:"जल के समानार्थी शब्द को पहचानें।",e:"‘नीर’ पानी का पर्यायवाची है।"},
+{q:"‘अंधकार’ का विलोम है:",o:["रात्रि","प्रकाश","छाया","काला"],a:1,h:"अंधकार के विपरीत अर्थ वाला शब्द चुनें।",e:"‘प्रकाश’ अंधकार का विलोम है।"},
+{q:"‘वह बहुत तेज दौड़ता है।’ में ‘बहुत’ किसे विशेषित करता है?",o:["वह","तेज","दौड़ता","है"],a:1,h:"यह ‘तेज’ की मात्रा बढ़ा रहा है।",e:"‘बहुत’ ‘तेज’ को विशेषित करता है।"},
+{q:"‘क्योंकि’ सामान्यतः किस संबंध को व्यक्त करता है?",o:["कारण","विरोध","विकल्प","स्थान"],a:0,h:"दूसरा खंड कारण बताता है।",e:"‘क्योंकि’ कारण का संबंध व्यक्त करता है।"},
+{q:"‘क्या तुम विद्यालय जाओगे?’ वाक्य है:",o:["आज्ञावाचक","प्रश्नवाचक","विधानवाचक","विस्मयादिबोधक"],a:1,h:"यह उत्तर मांगता है।",e:"यह प्रश्नवाचक वाक्य है।"},
+{q:"‘पेड़ पर पक्षी बैठा है।’ में ‘पर’ है:",o:["क्रिया","संबंधबोधक","संज्ञा","विशेषण"],a:1,h:"यह स्थान-संबंध बताता है।",e:"‘पर’ संबंधबोधक अव्यय है।"},
+{q:"‘महात्मा’ शब्द में कौन-सा समास है?",o:["द्वंद्व","कर्मधारय","बहुव्रीहि","द्विगु"],a:1,h:"‘महान आत्मा’ विग्रह देखें।",e:"‘महात्मा’ कर्मधारय समास का उदाहरण माना जाता है।"},
+{q:"‘विद्या’ से बनने वाला विशेषण है:",o:["विद्वान","विद्युत","विद्यार्थी","विद्या"],a:0,h:"ज्ञान रखने वाले व्यक्ति का शब्द चुनें।",e:"‘विद्वान’ विद्या से संबंधित विशेषण/संज्ञा रूप है।"},
+{q:"अपठित गद्यांश के उत्तर देते समय सबसे पहले क्या करना चाहिए?",o:["अनुमान लगाना","गद्यांश ध्यान से पढ़ना","केवल शीर्षक पढ़ना","उत्तर याद करना"],a:1,h:"उत्तर पाठ में दिए संकेतों पर आधारित होने चाहिए।",e:"गद्यांश को ध्यान से पढ़कर उत्तर पाठ के आधार पर देना चाहिए।"}
+],
+"Computer":[
+{q:"CPU का पूरा नाम क्या है?",o:["Central Processing Unit","Computer Primary Unit","Central Program Utility","Control Processing User"],a:0,h:"यह कंप्यूटर का मुख्य processing component है।",e:"CPU का अर्थ Central Processing Unit है।"},
+{q:"RAM किस प्रकार की memory है?",o:["Volatile","Permanent","Optical","Paper"],a:0,h:"Power off होने पर इसका सामान्य data बना नहीं रहता।",e:"RAM volatile memory है।"},
+{q:"1 byte में कितने bits होते हैं?",o:["4","8","16","32"],a:1,h:"एक standard byte की परिभाषा याद करें।",e:"1 byte = 8 bits."},
+{q:"Operating System का मुख्य काम क्या है?",o:["केवल चित्र बनाना","Hardware और software resources को manage करना","केवल इंटरनेट चलाना","केवल typing करना"],a:1,h:"यह system resources का प्रबंधन करता है।",e:"Operating System hardware, software और user interaction को manage करता है।"},
+{q:"किसका उपयोग web page बनाने में किया जाता है?",o:["HTML","CPU","RAM","BIOS"],a:0,h:"यह HyperText Markup Language है।",e:"HTML web pages की संरचना बनाने के लिए प्रयोग होता है।"},
+{q:"Algorithm क्या है?",o:["चित्र","समस्या हल करने के क्रमबद्ध चरण","केवल hardware","password"],a:1,h:"यह step-by-step procedure होता है।",e:"Algorithm किसी समस्या के समाधान के क्रमबद्ध चरण हैं।"},
+{q:"Flowchart में decision के लिए सामान्यतः कौन-सा shape होता है?",o:["Rectangle","Diamond","Circle","Triangle"],a:1,h:"शर्त/निर्णय वाले symbol को याद करें।",e:"Flowchart में decision के लिए diamond का उपयोग होता है।"},
+{q:"किसी मजबूत password में क्या होना चाहिए?",o:["केवल नाम","केवल 123456","विभिन्न प्रकार के characters का मिश्रण","केवल जन्मतिथि"],a:2,h:"Password को अनुमान लगाना कठिन होना चाहिए।",e:"Strong password में अलग-अलग प्रकार के characters का मिश्रण और पर्याप्त लंबाई होनी चाहिए।"},
+{q:"Phishing का उद्देश्य सामान्यतः क्या होता है?",o:["कंप्यूटर साफ करना","धोखे से sensitive information लेना","प्रिंटर ठीक करना","फाइल compress करना"],a:1,h:"यह social engineering का सामान्य उदाहरण है।",e:"Phishing में धोखे से passwords या अन्य sensitive information लेने की कोशिश की जाती है।"},
+{q:"Database में row को सामान्यतः क्या कहा जाता है?",o:["Record","Field","Formula","Slide"],a:0,h:"एक row एक complete entry को दर्शा सकती है।",e:"Database table की row को record कहा जाता है।"},
+{q:"Spreadsheet में cell किससे पहचाना जाता है?",o:["Row और column reference","केवल रंग","केवल file name","printer number"],a:0,h:"जैसे A1 एक cell reference है।",e:"Cell को column letter और row number से identify किया जाता है।"},
+{q:"किस device से paper document को digital image में बदला जा सकता है?",o:["Scanner","Speaker","Projector","Router"],a:0,h:"यह document को capture करता है।",e:"Scanner paper documents को digital form में बदल सकता है।"},
+{q:"LAN का पूरा नाम है:",o:["Local Area Network","Large Access Node","Linked Application Network","Long Area Number"],a:0,h:"यह छोटे भौगोलिक क्षेत्र का network है।",e:"LAN = Local Area Network."},
+{q:"Router का प्रमुख कार्य क्या है?",o:["Network traffic को route करना","केवल print करना","केवल sound बजाना","battery charge करना"],a:0,h:"यह अलग networks के बीच packets forward करता है।",e:"Router data packets को उपयुक्त network path पर forward करता है।"},
+{q:"Backup क्यों बनाया जाता है?",o:["Data loss से recovery के लिए","Screen बड़ा करने के लिए","CPU तेज करने के लिए","Keyboard बदलने के लिए"],a:0,h:"Backup की जरूरत failure या accidental deletion में पड़ती है।",e:"Backup data loss होने पर recovery में मदद करता है।"},
+{q:"Two-factor authentication क्या जोड़ता है?",o:["एक अतिरिक्त verification step","एक नया monitor","अतिरिक्त RAM","एक printer"],a:0,h:"Password के अलावा दूसरा verification factor होता है।",e:"2FA login security के लिए अतिरिक्त verification step जोड़ता है।"},
+{q:"Binary number system में कौन-से digits होते हैं?",o:["0 और 1","1 और 2","0 से 9","A से F"],a:0,h:"Computers में binary दो states पर आधारित है।",e:"Binary system में 0 और 1 digits होते हैं।"},
+{q:"Open-source software का source code सामान्यतः:",o:["उपलब्ध license की शर्तों के अनुसार देखा/बदला जा सकता है","हमेशा secret होता है","केवल printer में होता है","कभी copy नहीं हो सकता"],a:0,h:"Open source का अर्थ licensing context में समझें।",e:"Open-source software का source code संबंधित license की शर्तों के तहत उपलब्ध होता है।"},
+{q:"Malware क्या है?",o:["Malicious software","Monitor hardware","Math formula","Email address"],a:0,h:"नाम में ‘malicious’ संकेत देता है।",e:"Malware ऐसे software को कहा जाता है जो नुकसान या अनधिकृत गतिविधि के लिए बनाया गया हो।"},
+{q:"Cloud storage का अर्थ है:",o:["Internet-based remote storage","केवल USB storage","paper file","printer memory"],a:0,h:"Data remote servers पर रखा जाता है।",e:"Cloud storage remote servers पर internet के माध्यम से data store करता है।"},
+{q:"Ctrl+C सामान्यतः किस काम के लिए है?",o:["Copy","Cut","Close","Compile"],a:0,h:"Basic keyboard shortcut याद करें।",e:"Ctrl+C copy command का सामान्य shortcut है।"},
+{q:"Ctrl+Z सामान्यतः किसके लिए है?",o:["Undo","Zoom only","Save","Print"],a:0,h:"पिछली action को वापस लेने वाला shortcut है।",e:"Ctrl+Z सामान्यतः Undo के लिए उपयोग होता है।"},
+{q:"File extension .pdf किससे संबंधित है?",o:["Portable Document Format","Program Data File","Photo Design Folder","Private Data Form"],a:0,h:"यह document sharing का लोकप्रिय format है।",e:".pdf का अर्थ Portable Document Format है।"},
+{q:"Cyberbullying से बचने के लिए क्या करना उचित है?",o:["सबको password देना","Evidence सुरक्षित रखकर trusted adult/platform को report करना","हर message forward करना","unknown links खोलना"],a:1,h:"Safety और reporting को प्राथमिकता दें।",e:"Cyberbullying में evidence सुरक्षित रखना और उचित trusted person/platform को report करना मददगार है।"},
+{q:"Software update क्यों महत्वपूर्ण हो सकता है?",o:["Security fixes और improvements के लिए","केवल screen का रंग बदलने के लिए","Keyboard हटाने के लिए","Internet बंद करने के लिए"],a:0,h:"Updates में patches हो सकते हैं।",e:"Updates में security patches, bug fixes और improvements शामिल हो सकते हैं।"}
+],
+"Information Technology":[
+{q:"Digital document बनाने के लिए किस प्रकार के software का उपयोग होता है?",o:["Word processor","Calculator only","Media player","Antivirus only"],a:0,h:"यह text documents बनाने/संपादित करने के लिए होता है।",e:"Word processor digital documents बनाने और edit करने के लिए प्रयोग होता है।"},
+{q:"Spreadsheet में formula सामान्यतः किस symbol से शुरू होता है?",o:["=","#","@","&"],a:0,h:"Excel/Calc जैसे tools में formula prefix याद करें।",e:"Spreadsheet formulas सामान्यतः = से शुरू होते हैं।"},
+{q:"Spreadsheet में SUM function का उपयोग किसलिए है?",o:["योग निकालने के लिए","Text translate करने के लिए","Image crop करने के लिए","Password बदलने के लिए"],a:0,h:"SUM का अर्थ total करना है।",e:"SUM selected numeric values का योग निकालता है।"},
+{q:"Presentation में एक page को सामान्यतः क्या कहते हैं?",o:["Slide","Record","Cell","Packet"],a:0,h:"Presentation software की मूल इकाई याद करें।",e:"Presentation का एक page/scene सामान्यतः slide कहलाता है।"},
+{q:"Cyber safety में personal information साझा करने से पहले क्या देखना चाहिए?",o:["Recipient और purpose","केवल message का रंग","Keyboard brand","Screen size"],a:0,h:"Data sharing सोच-समझकर करें।",e:"Personal information share करने से पहले recipient, purpose और privacy implications पर विचार करना चाहिए।"},
+{q:"Data validation का उद्देश्य क्या है?",o:["Input को निर्धारित rules के अनुसार नियंत्रित करना","Computer को paint करना","Internet speed बढ़ाना","Monitor repair करना"],a:0,h:"यह input quality/control से जुड़ा है।",e:"Data validation यह सुनिश्चित करने में मदद करता है कि input निर्धारित नियमों के अनुरूप हो।"},
+{q:"Digital footprint क्या है?",o:["Online activities से बनने वाला data trail","Computer का physical base","Printer cable","Mouse pad"],a:0,h:"यह online presence से जुड़ा है।",e:"Digital footprint online activities से छोड़ा गया data trail है।"},
+{q:"Phishing message में कौन-सा संकेत suspicious हो सकता है?",o:["Urgent request और unknown link","साफ source और verified domain","आपकी own notes","offline textbook"],a:0,h:"Unexpected urgency और links सावधानी का संकेत हैं।",e:"Urgent requests, suspicious links और sender/domain mismatch phishing के संकेत हो सकते हैं।"},
+{q:"Database table में column को सामान्यतः क्या कहते हैं?",o:["Field","Record","Slide","Paragraph"],a:0,h:"Column एक attribute को represent कर सकता है।",e:"Database table में column को field कहा जाता है।"},
+{q:"A spreadsheet cell reference B4 का अर्थ है:",o:["Column B, Row 4","Row B, Column 4","Page B4","Book 4"],a:0,h:"पहले letter, फिर number पढ़ें।",e:"B4 column B और row 4 को दर्शाता है।"},
+{q:"Good workplace communication में क्या महत्वपूर्ण है?",o:["Clarity and appropriate tone","केवल capital letters","अस्पष्ट संदेश","बिना context के instructions"],a:0,h:"Communication का उद्देश्य समझ में आना है।",e:"Clear, respectful और context-appropriate communication महत्वपूर्ण है।"},
+{q:"Self-management में कौन-सी skill उपयोगी है?",o:["Time management","Password sharing","Rumour spreading","Data deletion"],a:0,h:"अपने काम और समय को व्यवस्थित करना सोचें।",e:"Time management self-management की महत्वपूर्ण skill है।"},
+{q:"Green computing का उद्देश्य किससे जुड़ा है?",o:["Technology के environmental impact को कम करना","केवल green wallpaper","अधिक paper print करना","devices को हमेशा on रखना"],a:0,h:"Environment-friendly technology practices सोचें।",e:"Green computing energy use और e-waste जैसे environmental impacts को कम करने से जुड़ा है।"},
+{q:"Two-factor authentication में क्या होता है?",o:["दो independent verification factors","दो monitors","दो keyboards","दो browsers"],a:0,h:"Login के लिए अतिरिक्त verification।",e:"2FA में सामान्य password के अलावा दूसरा verification factor होता है।"},
+{q:"Data backup का मुख्य लाभ है:",o:["Data recovery","Screen brightness","Typing speed","Speaker volume"],a:0,h:"Backup failure/deletion के बाद मदद करता है।",e:"Backup data loss के बाद recovery की सुविधा देता है।"},
+{q:"Digital presentation में बहुत अधिक text होने से क्या समस्या हो सकती है?",o:["Readability और attention प्रभावित हो सकती है","CPU हमेशा बंद हो जाता है","Internet स्वतः तेज हो जाता है","File कभी save नहीं होती"],a:0,h:"Presentation audience के लिए concise होनी चाहिए।",e:"बहुत अधिक text readability और audience attention को प्रभावित कर सकता है।"},
+{q:"A strong password should generally be:",o:["Long and hard to guess","Your name only","123456","Same everywhere"],a:0,h:"Length और unpredictability महत्वपूर्ण हैं।",e:"Strong passwords पर्याप्त लंबे और अनुमान लगाना कठिन होने चाहिए।"},
+{q:"URL किससे संबंधित है?",o:["Web resource का address","Computer battery","Printer ink","RAM chip"],a:0,h:"Browser address bar में इसे देखा जा सकता है।",e:"URL web resource का address/location बताता है।"},
+{q:"Copyright का संबंध किससे है?",o:["Original creative works के legal rights","Internet speed","CPU temperature","Keyboard layout"],a:0,h:"Creative work के अधिकारों पर ध्यान दें।",e:"Copyright original creative works पर कानूनी अधिकारों से संबंधित है।"},
+{q:"Accessible digital content बनाने के लिए क्या उपयोगी है?",o:["Readable contrast, headings और alternatives","केवल tiny text","केवल images without context","बहुत तेज animations"],a:0,h:"Content अधिक लोगों के लिए usable होना चाहिए।",e:"Clear headings, readable presentation और suitable alternatives accessibility में मदद करते हैं।"},
+{q:"A spreadsheet chart का उपयोग किसलिए किया जा सकता है?",o:["Data को visual रूप में दिखाने के लिए","Password store करने के लिए","CPU repair करने के लिए","File encrypt करने के लिए"],a:0,h:"Charts data visualization से जुड़े हैं।",e:"Charts numerical/data patterns को visual रूप में प्रस्तुत करते हैं।"},
+{q:"Cloud computing में resources सामान्यतः:",o:["Network के माध्यम से remote systems से उपलब्ध होते हैं","केवल paper पर होते हैं","केवल offline calculator में होते हैं","हमेशा USB में होते हैं"],a:0,h:"Remote servers और network access सोचें।",e:"Cloud resources network के माध्यम से remote infrastructure से उपलब्ध हो सकते हैं।"},
+{q:"Information security में confidentiality का अर्थ है:",o:["Information को unauthorized access से बचाना","Data को हमेशा public करना","File को delete करना","Screen को dim करना"],a:0,h:"यह access control से जुड़ा security goal है।",e:"Confidentiality का लक्ष्य information को unauthorized disclosure/access से बचाना है।"},
+{q:"Data privacy का अर्थ है:",o:["Personal data के उचित collection, use और sharing से जुड़ी सुरक्षा","हर data को public करना","Password हटाना","सभी files print करना"],a:0,h:"Personal information के responsible handling पर ध्यान दें।",e:"Data privacy personal data के उचित handling और user rights से संबंधित है।"},
+{q:"A suspicious attachment के साथ क्या करना उचित है?",o:["Source verify किए बिना open न करना","तुरंत सबको forward करना","Password भेजना","Unknown macro enable करना"],a:0,h:"Unknown files में risk हो सकता है।",e:"Suspicious attachment को verify किए बिना खोलना सुरक्षित practice नहीं है।"}
+]};
+
+Object.keys(addedQuestionBank).forEach(k=>baseQuestionBank[k]=addedQuestionBank[k]);
+
+
+/* Advanced dynamic CBSE-style question engine.
+   The pool is virtual: questions are generated at runtime instead of
+   storing millions of duplicate records in the HTML file. */
+const QUESTION_POOL_SIZE=2500000;
+const ADVANCED_PATTERNS={
+  English:{
+    "Footprints: A Triumph of Surgery":[
+      "How does the chapter use contrast between appearance and actual well-being to shape the reader's judgement of Tricki?",
+      "Which inference best explains the change in Tricki's behaviour after the routines at the surgery?",
+      "How does humour strengthen the chapter's criticism of overindulgence?"
+    ],
+    "Footprints: The Thief's Story":[
+      "Why is Anil's trust more significant than the immediate material loss in shaping Hari Singh's decision?",
+      "How does the narrator's changing attitude reveal the chapter's central conflict between opportunity and conscience?",
+      "Which interpretation best explains why education functions as a turning point in the story?"
+    ],
+    "Footprints: The Midnight Visitor":[
+      "How does Ausable's response to Max demonstrate that intelligence can substitute for physical advantage?",
+      "Which detail most strongly creates the chapter's final reversal?",
+      "How does the contrast between Ausable's appearance and his actual capability affect the reader's expectations?"
+    ],
+    "Footprints: A Question of Trust":[
+      "How does Horace Danby justify his actions to himself, and what does that reveal about self-deception?",
+      "Why is the woman in the red cloak central to the story's irony?",
+      "Which inference best explains why Horace's expertise ultimately fails him?"
+    ],
+    "Footprints: Footprints without Feet":[
+      "How does Griffin's scientific ability become ethically destructive in the absence of restraint?",
+      "Which contrast between invisibility and vulnerability is central to the chapter?",
+      "How does the sequence of Griffin's choices build the reader's judgement of his character?"
+    ],
+    "Footprints: The Making of a Scientist":[
+      "Which combination of habits most plausibly explains Richard Ebright's development as a scientist?",
+      "How does curiosity transform ordinary observations into scientific investigation in the chapter?",
+      "What does the chapter imply about the relationship between disciplined work and talent?"
+    ],
+    "Footprints: The Necklace":[
+      "How does the ending transform the reader's understanding of Mathilde's decade-long sacrifice?",
+      "Which theme is strengthened most by the difference between appearance and reality in the story?",
+      "How does the necklace function as a device for irony rather than merely as an object?"
+    ],
+    "Footprints: The Hack Driver":[
+      "How does the narrator's initial confidence contribute to the irony of his experience with Bill?",
+      "Which inference best explains how Lutkins controls the situation without openly confronting the narrator?",
+      "How does the story expose the gap between professional expectations and real-world judgement?"
+    ],
+    "Footprints: Bholi":[
+      "How does education alter Bholi's ability to make an independent decision?",
+      "Which contrast most clearly reveals the change in Bholi's self-confidence?",
+      "How does the ending challenge the social assumptions that shaped Bholi's early life?"
+    ],
+    "Footprints: The Book That Saved the Earth":[
+      "How does the play use misunderstanding to create humour and advance its plot?",
+      "Which feature of Think-Tank's leadership is most clearly exposed through the Martian interpretation of the nursery rhyme?",
+      "How does the dramatic form make the chapter's central idea more effective?"
+    ]
+  },
+  Hindi:{
+    "स्पर्श-2: कबीर-साखी":[
+      "कबीर की साखियों में बाहरी आडंबर की अपेक्षा आत्मचिंतन को महत्व देने का विचार किस प्रकार उभरता है?",
+      "साखियों में प्रयुक्त विरोधाभास पाठक को किस नैतिक निष्कर्ष तक पहुँचाता है?",
+      "कबीर की भाषा की सादगी उनके संदेश की प्रभावशीलता को कैसे बढ़ाती है?"
+    ],
+    "स्पर्श-2: मीरा-पद":[
+      "मीरा के पदों में भक्ति और सामाजिक बंधनों के बीच तनाव किस प्रकार व्यक्त होता है?",
+      "मीरा की कृष्ण-भक्ति को व्यक्तिगत अनुभव के रूप में समझने के लिए कौन-सा संकेत सबसे महत्वपूर्ण है?",
+      "मीरा के काव्य में समर्पण की भावना भाषा और भाव दोनों स्तरों पर कैसे प्रकट होती है?"
+    ],
+    "स्पर्श-2: बिहारी-दोहे":[
+      "बिहारी के दोहों की संक्षिप्तता उनके अर्थ की गहराई को कैसे बढ़ाती है?",
+      "दोहों में निहित संकेतार्थ को समझने के लिए शब्द-चयन की क्या भूमिका है?",
+      "बिहारी के दोहों में अलंकार और भाव के संबंध को किस प्रकार समझा जा सकता है?"
+    ],
+    "स्पर्श-2: मनुष्यता":[
+      "कविता मनुष्यता को केवल व्यक्तिगत गुण न मानकर सामाजिक उत्तरदायित्व के रूप में कैसे प्रस्तुत करती है?",
+      "कवि के अनुसार सच्ची मानवता और आत्मकेंद्रित जीवन में क्या अंतर है?",
+      "कविता में त्याग और परोपकार का संबंध किस व्यापक मूल्य से जुड़ता है?"
+    ],
+    "स्पर्श-2: पर्वत प्रदेश में पावस":[
+      "प्रकृति के बदलते रूपों को चित्रित करने में बिंबों की क्या भूमिका है?",
+      "कविता में पर्वतीय वर्षा के दृश्य को गतिशील बनाने वाले काव्य-तत्व कौन-से हैं?",
+      "प्रकृति-चित्रण के माध्यम से कवि किस प्रकार संवेदनात्मक अनुभव रचता है?"
+    ],
+    "स्पर्श-2: मधुर-मधुर मेरे दीपक जल":[
+      "दीपक का प्रतीक कविता में किस प्रकार आत्मबल और साधना का अर्थ ग्रहण करता है?",
+      "कविता में प्रकाश और अंधकार के प्रतीकात्मक संबंध को कैसे समझेंगे?",
+      "कविता का भाव-संसार व्यक्तिगत आकांक्षा से व्यापक आध्यात्मिक अर्थ तक कैसे पहुँचता है?"
+    ],
+    "स्पर्श-2: तोप":[
+      "‘तोप’ कविता में सत्ता और इतिहास के संबंध को व्यंग्य के माध्यम से कैसे उभारा गया है?",
+      "निर्जीव तोप का बदलता सामाजिक संदर्भ कविता के संदेश को किस प्रकार प्रभावित करता है?",
+      "कविता में विडंबना का प्रयोग पाठक की दृष्टि को कैसे बदलता है?"
+    ],
+    "स्पर्श-2: कर चले हम फ़िदा":[
+      "कविता में सैनिक बलिदान को व्यक्तिगत शोक से आगे राष्ट्रीय उत्तरदायित्व से कैसे जोड़ा गया है?",
+      "कवि आने वाली पीढ़ी से किस प्रकार की अपेक्षा व्यक्त करता है?",
+      "कविता की भाव-प्रवणता किन शब्द-चित्रों से मजबूत होती है?"
+    ],
+    "स्पर्श-2: आत्मत्राण":[
+      "कविता में कवि संकट को समाप्त करने के बजाय उसका सामना करने की शक्ति क्यों माँगता है?",
+      "आत्मत्राण की प्रार्थना में आत्मनिर्भरता का कौन-सा विचार निहित है?",
+      "कविता का आध्यात्मिक स्वर जीवन-संघर्ष की व्यावहारिक समझ से कैसे जुड़ता है?"
+    ],
+    "स्पर्श-2: बड़े भाई साहब":[
+      "बड़े भाई साहब के व्यवहार में अनुशासन और स्नेह का द्वंद्व कैसे दिखाई देता है?",
+      "कहानी का हास्य पारिवारिक संबंधों की गंभीरता को किस प्रकार कम नहीं बल्कि उजागर करता है?",
+      "बड़े भाई साहब और छोटे भाई के स्वभाव का अंतर कहानी के संदेश को कैसे विकसित करता है?"
+    ],
+    "स्पर्श-2: डायरी का एक पन्ना":[
+      "डायरी शैली इतिहास को व्यक्तिगत अनुभव में बदलने में कैसे सहायक होती है?",
+      "लेखक के अनुभव से सामूहिक राजनीतिक चेतना का कौन-सा स्वर उभरता है?",
+      "दृश्यात्मक विवरण पाठक को घटना के साथ जोड़ने में कैसे प्रभावी है?"
+    ],
+    "स्पर्श-2: तताँरा-वामीरो कथा":[
+      "लोककथा के तत्व सामाजिक रूढ़ियों की आलोचना को कैसे प्रभावी बनाते हैं?",
+      "तताँरा और वामीरो के संबंध के माध्यम से परंपरा और व्यक्तिगत इच्छा का संघर्ष कैसे उभरता है?",
+      "कथा का अंत उसके सामाजिक संदेश को किस प्रकार गहरा करता है?"
+    ],
+    "स्पर्श-2: तीसरी कसम के शिल्पकार शैलेंद्र":[
+      "शैलेंद्र के व्यक्तित्व में संवेदनशीलता और रचनात्मकता का संबंध कैसे दिखाई देता है?",
+      "फिल्म निर्माण के संदर्भ में शैलेंद्र के आदर्शवाद की क्या विशेषता है?",
+      "पाठ लेखक के व्यक्तित्व को केवल जीवनी नहीं बल्कि मूल्य-आधारित दृष्टि से कैसे प्रस्तुत करता है?"
+    ],
+    "स्पर्श-2: अब कहाँ दूसरों के दुख से दुखी होने वाले":[
+      "पाठ में मानवीय संवेदना के क्षरण को किन उदाहरणों से समझाया गया है?",
+      "लेखक आधुनिक जीवन की किस प्रवृत्ति पर प्रश्न उठाता है?",
+      "पाठ का शीर्षक पूरे विचार-विमर्श को किस प्रकार दिशा देता है?"
+    ],
+    "स्पर्श-2: पतझर में टूटी पत्तियाँ":[
+      "पाठ में बाहरी घटनाओं के माध्यम से आंतरिक जीवन-दृष्टि कैसे व्यक्त होती है?",
+      "लेखक की भाषा में सूक्ष्म निरीक्षण का क्या महत्व है?",
+      "पाठ के अनुभवों से जीवन के प्रति कौन-सा संतुलित दृष्टिकोण उभरता है?"
+    ],
+    "स्पर्श-2: कारतूस":[
+      "एकांकी में वज़ीर अली का चरित्र साहस और रणनीति के किस संयोजन से बनता है?",
+      "नाटकीय संवाद कथानक में तनाव और चरित्र-निर्माण दोनों कैसे उत्पन्न करते हैं?",
+      "कारतूस शीर्षक घटना और सत्ता-संघर्ष के प्रतीकात्मक अर्थ को कैसे मजबूत करता है?"
+    ],
+    "संचयन-2: हरिहर काका":[
+      "हरिहर काका की स्थिति के माध्यम से संपत्ति, परिवार और धार्मिक स्वार्थ का संबंध कैसे उजागर होता है?",
+      "कहानी में कथित धार्मिकता और वास्तविक स्वार्थ के बीच अंतर किन घटनाओं से स्पष्ट होता है?",
+      "हरिहर काका का मौन और असुरक्षा कहानी के सामाजिक संदेश को कैसे गहरा करते हैं?"
+    ],
+    "संचयन-2: सपनों के-से दिन":[
+      "स्मृति-आधारित कथन बचपन के अनुभवों को किस प्रकार जीवंत बनाता है?",
+      "कहानी में शिक्षा और बाल-मन के संबंध को किस दृष्टि से देखा गया है?",
+      "शीर्षक अतीत की स्मृतियों के भावात्मक स्वर को कैसे व्यक्त करता है?"
+    ],
+    "संचयन-2: टोपी शुक्ला":[
+      "टोपी और इफ्फन की मित्रता सामाजिक पहचान की रूढ़ धारणाओं को किस प्रकार चुनौती देती है?",
+      "कहानी में बाल-मन की सहजता और वयस्क समाज की पूर्वधारणाओं का विरोध कैसे उभरता है?",
+      "टोपी शुक्ला का अनुभव सांप्रदायिकता के विरुद्ध मानवीय संबंधों की भूमिका को कैसे स्पष्ट करता है?"
+    ]
+  }
+};
+const VARIANTS=[
+  "Which option best supports the inference in the question?",
+  "Which interpretation is most defensible from the chapter?",
+  "Which statement best captures the deeper implication?",
+  "Which conclusion follows most logically from the chapter?"
+];
+function hashSeed(str){
+  let h=2166136261;
+  for(let i=0;i<str.length;i++){h^=str.charCodeAt(i);h=Math.imul(h,16777619);}
+  return h>>>0;
+}
+function makeAdvancedQuestion(subject,chapter,seed){
+  const list=(ADVANCED_PATTERNS[subject]&&ADVANCED_PATTERNS[subject][chapter])||[];
+  if(!list.length)return null;
+  const idx=(seed+hashSeed(chapter))%list.length;
+  const base=list[idx];
+  const variant=VARIANTS[(seed*7+idx)%VARIANTS.length];
+  const correct=subject==="Hindi"?"पाठ के प्रसंग, घटनाओं और भाव-तत्वों से यही व्याख्या सबसे सीधे समर्थित होती है।":"The chapter evidence most directly supports this interpretation.";
+  const distractors=subject==="Hindi"?[
+    "यह निष्कर्ष केवल अनुमान पर आधारित है और पाठ के किसी प्रसंग से समर्थित नहीं है।",
+    "यह व्याख्या पाठ में कारण और परिणाम के संबंध को उलट देती है।",
+    "यह विकल्प एक छोटे विवरण पर केंद्रित है और पाठ के व्यापक संदर्भ की उपेक्षा करता है।"
+  ]:[
+    "The chapter gives no relevant evidence and the interpretation depends only on guesswork.",
+    "The interpretation reverses the chapter's central relationship between cause and effect.",
+    "The statement focuses on an isolated detail while ignoring the larger textual pattern."
+  ];
+  const opts=[correct,...distractors],shift=(seed*13)%4;
+  const rotated=opts.map((_,i)=>opts[(i+shift)%4]);
+  const answer=(4-shift)%4;
+  return {q:`${base} ${variant}`,o:rotated,a:answer,h:"Re-read the chapter's key event, character choice, theme and consequence before selecting the strongest inference.",e:"This is an analytical, inference-based practice question designed around CBSE-style higher-order reading rather than simple recall.",chapter,d:3,source:"CBSE-style generated practice"};
+}
+function dynamicQuestions(subject,chapter,count=60){
+  const list=[];
+  const source=(ADVANCED_PATTERNS[subject]&&ADVANCED_PATTERNS[subject][chapter])||[];
+  if(!source.length)return list;
+  const seedBase=(testNumber+1)*100003+hashSeed(subject+"|"+chapter);
+  for(let i=0;i<count;i++){
+    const q=makeAdvancedQuestion(subject,chapter,(seedBase+i*7919)%QUESTION_POOL_SIZE);
+    if(q)list.push(q);
+  }
+  return list;
+}
+
+function getChapters(){
+  const c=document.getElementById("classSelect").value;
+  const sub=document.getElementById("subjectSelect").value;
+  return (chapterMap[c]&&chapterMap[c][sub])||["All Chapters","Revision Test","Mixed Practice"];
+}
+function populateSubjects(){
+  const el=document.getElementById("subjectSelect");
+  const old=el.value;
+  el.innerHTML=SUBJECTS.map(x=>`<option>${x}</option>`).join("");
+  if(SUBJECTS.includes(old)) el.value=old;
+  populateChapters();
+}
+function populateChapters(){
+  const el=document.getElementById("chapterSelect");
+  const list=getChapters();
+  el.innerHTML=`<option value="ALL">All Chapters</option>`+list.map(x=>`<option>${x}</option>`).join("");
+}
+document.getElementById("classSelect").addEventListener("change",populateSubjects);
+document.getElementById("subjectSelect").addEventListener("change",populateChapters);
+
+let questions=[],current=0,score=0,answered=false,seconds=900,timer=null,userAnswers=[];
+let testNumber=Number(localStorage.getItem("examTestNumber")||0);
+
+function complexityScore(q){
+  const text=(q.q||"").length;
+  return (q.d||0)*100 + text;
+}
+function prepareBank(subject,chapter){
+  const base=[...(baseQuestionBank[subject]||baseQuestionBank.Mathematics)].map((q,i)=>({
+    ...q,d:q.d||((i%3)+1),chapter:q.chapter||null
+  }));
+  const dynamic=[];
+  if(chapter!=="ALL") dynamic.push(...dynamicQuestions(subject,chapter,80));
+  else{
+    const chapters=getChapters().filter(x=>x!=="All Chapters"&&x!=="Revision Test"&&x!=="Mixed Practice");
+    chapters.forEach(ch=>dynamic.push(...dynamicQuestions(subject,ch,Math.max(3,Math.floor(80/Math.max(1,chapters.length))))));
+  }
+  const exact=chapter==="ALL"?[...dynamic,...base]:[...dynamic,...base.filter(q=>q.chapter===chapter)];
+  return exact.length>=25?exact:(exact.length?exact.concat(base.filter(q=>!exact.includes(q))):base);
+}
+function openPractice(){
+  const subject=document.getElementById("subjectSelect").value;
+  const chapter=document.getElementById("chapterSelect").value;
+  const bank=prepareBank(subject,chapter);
+  testNumber++;
+  localStorage.setItem("examTestNumber",testNumber);
+  const targetLevel=Math.min(3,Math.ceil(testNumber/2));
+  let ordered=[...bank].sort((a,b)=>complexityScore(b)-complexityScore(a));
+  if(targetLevel===1) ordered=ordered.slice(-Math.min(25,ordered.length));
+  else if(targetLevel===2){
+    const mid=ordered.slice(Math.floor(ordered.length*.25),Math.ceil(ordered.length*.9));
+    ordered=mid.length>=25?mid:ordered;
+  }
+  questions=ordered.sort(()=>Math.random()-0.5).slice(0,Math.min(25,ordered.length));
+  if(questions.length<25){
+    const fill=bank.filter(q=>!questions.includes(q)).sort(()=>Math.random()-0.5);
+    questions=questions.concat(fill).slice(0,Math.min(25,bank.length));
+  }
+  current=0;score=0;seconds=900;userAnswers=[];
+  document.getElementById("practice").style.display="block";
+  document.getElementById("result").style.display="none";
+  document.querySelector("#practice .title p").textContent=`25 questions • Random order • ${document.getElementById("boardSelect").value} • Level ${targetLevel} • ${chapter==="ALL"?"All Chapters":chapter}`;
+  document.getElementById("practice").scrollIntoView({behavior:"smooth"});
+  loadQuestion();clearInterval(timer);timer=setInterval(updateTimer,1000);
+}
+function loadQuestion(){
+let q=questions[current];answered=false;
+document.getElementById("qNumber").textContent=`Question ${current+1} of ${questions.length}`;
+document.getElementById("question").textContent=q.q;
+document.getElementById("progress").style.width=`${((current+1)/questions.length)*100}%`;
+document.getElementById("hint").style.display="none";
+document.getElementById("explanation").style.display="none";
+document.getElementById("options").innerHTML=q.o.map((x,i)=>`<div class="option" onclick="selectAnswer(${i})">${String.fromCharCode(65+i)}. ${x}</div>`).join("");
+}
+function selectAnswer(index){
+if(answered)return;answered=true;let q=questions[current],options=document.querySelectorAll(".option");userAnswers[current]=index;
+if(index===q.a){score++;options[index].classList.add("correct")}else{options[index].classList.add("wrong");options[q.a].classList.add("correct")}
+document.getElementById("explanation").innerHTML="<b>Explanation:</b> "+q.e;
+document.getElementById("explanation").style.display="block";
+}
+function showHint(){if(!answered){document.getElementById("hint").textContent="💡 "+questions[current].h;document.getElementById("hint").style.display="block"}}
+function nextQuestion(){if(!answered){alert("Please select an answer first.");return}if(current<questions.length-1){current++;loadQuestion()}else finishTest()}
+function updateTimer(){seconds--;document.getElementById("time").textContent=String(Math.floor(seconds/60)).padStart(2,"0")+":"+String(seconds%60).padStart(2,"0");if(seconds<=0){clearInterval(timer);finishTest()}}
+function finishTest(){
+clearInterval(timer);document.getElementById("practice").style.display="none";
+let percentage=Math.round(score/questions.length*100);document.getElementById("resultScore").textContent=percentage+"%";
+document.getElementById("resultText").innerHTML=`You scored <b>${score}</b> out of <b>${questions.length}</b> questions.`;
+document.getElementById("review").innerHTML=questions.map((q,i)=>userAnswers[i]===undefined?"":`<div class="review-item"><b>Q${i+1}. ${q.q}</b><br>${userAnswers[i]===q.a?"✅ Correct":"❌ Incorrect"}<br>Correct answer: <b>${q.o[q.a]}</b></div>`).join("");
+document.getElementById("result").style.display="block";document.getElementById("result").scrollIntoView({behavior:"smooth"});
+}
+function restartTest(){openPractice()}
+function chooseClass(c){document.getElementById("classSelect").value=c;populateSubjects();document.getElementById("chapterSelect").value="ALL";openPractice()}
+function chooseSubject(s){document.getElementById("subjectSelect").value=s;populateChapters();document.getElementById("chapterSelect").value="ALL";openPractice()}
+populateSubjects();
+
+</script>
+
+</body></html>
